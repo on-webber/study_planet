@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Study</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Study Planet</h1>
+        <nav>
+        </nav>
+    </header>
+    <div class="content">
+        Ch - 1 Matter in our surrounding
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Custom Video Player with Advanced Controls</title>
+          <!-- Video.js CSS -->
+          <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
+          <style>
+            /* Custom CSS */
+            body {
+              font-family: Arial, sans-serif;
+              background-color: #282828;
+              color: #0a0a0a;
+              text-align: center;
+              margin: 0;
+              padding: 20px;
+            }
+        
+            .container {
+              max-width: 800px;
+              margin: 0 auto;
+            }
+        
+            .video-js {
+              width: 100%;
+              height: 450px;
+              margin: 20px auto;
+              border-radius: 10px;
+              overflow: hidden;
+            }
+        
+            .vjs-control-bar {
+              background-color: rgba(0, 0, 0, 0.7) !important;
+            }
+        
+            .vjs-big-play-button {
+              background-color: rgba(0, 0, 0, 0.5) !important;
+              border-radius: 50% !important;
+              width: 80px !important;
+              height: 80px !important;
+              line-height: 80px !important;
+              border: none !important;
+            }
+        
+            .vjs-big-play-button:hover {
+              background-color: rgba(0, 0, 0, 0.7) !important;
+            }
+        
+            .custom-controls {
+              margin-top: 10px;
+            }
+        
+            .custom-controls button {
+              background-color: #444;
+              color: #fff;
+              border: none;
+              padding: 10px 15px;
+              margin: 5px;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+        
+            .custom-controls button:hover {
+              background-color: #555;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            
+            <!-- Video Player -->
+            <video id="my-video" class="video-js" controls preload="auto" data-setup="{}">
+              <source src="C:\Users\spras\Downloads\videoplayback (3).mp4" type="video/mp4">
+              <source src="C:\Users\spras\Downloads\videoplayback (3).mp4" type="video/ogg">
+              <p class="vjs-no-js">
+                To view this video, please enable JavaScript or use a browser that supports HTML5 video.
+              </p>
+            </video>
+        
+            <!-- Custom Controls -->
+            <div class="custom-controls">
+              <button onclick="skip(-10)">⏪ 10s</button>
+              <button onclick="skip(10)">⏩ 10s</button>
+              <button onclick="changeVolume(-0.1)">🔉 Volume Down</button>
+              <button onclick="changeVolume(0.1)">🔊 Volume Up</button>
+              <button onclick="changeSpeed(0.5)">0.5x</button>
+              <button onclick="changeSpeed(1)">1x</button>
+              <button onclick="changeSpeed(1.5)">1.5x</button>
+              <button onclick="changeSpeed(2)">2x</button>
+              <button onclick="changeSpeed(4)">4x</button>
+              <button onclick="changeSpeed(10)">10x- for legends</button>
+            </div>
+          </div>
+        
+          <!-- Video.js Script -->
+          <script src="https://vjs.zencdn.net/7.15.4/video.js"></script>
+          <script>
+            // Initialize Video.js
+            const player = videojs('my-video');
+        
+            // Custom Functions
+            function skip(seconds) {
+              const currentTime = player.currentTime();
+              player.currentTime(currentTime + seconds);
+            }
+        
+            function changeVolume(change) {
+              const currentVolume = player.volume();
+              const newVolume = Math.min(Math.max(currentVolume + change, 0), 1); // Clamp between 0 and 1
+              player.volume(newVolume);
+            }
+        
+            function changeSpeed(speed) {
+              player.playbackRate(speed);
+            }
+        
+            // Event Listeners
+            player.ready(function () {
+              console.log('Video player is ready!');
+        
+              // Log when the video starts playing
+              player.on('play', function () {
+                console.log('Video is playing!');
+              });
+        
+              // Log when the video is paused
+              player.on('pause', function () {
+                console.log('Video is paused!');
+              });
+            });
+          </script>
+        </body>
+        
+        <a href="science.html">Go Back</a>
+             </div>
+             
+                <p>&copy; 2024 Study Planet - Pranav Kr. Sharma. All rights Reserved <a href="E:\Study Planet -- Privacy Policy.pdf">  Privacy Policy</a></p>
+            </body>
+</html>

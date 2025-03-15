@@ -9,11 +9,14 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #d4f4dd; /* Pastel green background */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
-            background: #333;
-            color: #fff;
+            background: #a8e6cf; /* Pastel green header */
+            color: #333;
             padding: 1rem 0;
             text-align: center;
         }
@@ -27,8 +30,12 @@
             margin: 0 15px;
         }
         nav ul li a {
-            color: #fff;
+            color: #333;
             text-decoration: none;
+        }
+        a {
+            color: #333; /* Black color for links */
+            text-decoration: none; /* Remove underline */
         }
         .content {
             max-width: 800px;
@@ -36,14 +43,32 @@
             background: #fff;
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+        .box-link {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #a8e6cf; /* Pastel green background */
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li::before {
+            content: "➔"; /* Arrow symbol */
+            margin-right: 10px;
+            color: #333;
         }
         footer {
             text-align: center;
             padding: 10px 0;
-            background: #333;
-            color: #fff;
-            position: fixed;
-            bottom: 0;
+            background: #a8e6cf; /* Pastel green footer */
+            color: #333;
             width: 100%;
         }
     </style>
@@ -55,17 +80,17 @@
         </nav>
     </header>
     <div class="content">
-        Ch - 11 Sound
+        <h2>Ch - 11 Sound</h2>
         <ul>
-            <li><a href="##">N.C.E.R.T Book Ch. PDF</a></li>
-            <li><a href="##">N.C.E.R.T Exemplar PDF</A></li>
-            <li><a href="##">LECTURES BY PHYSICS WALLAH</a> 
-            <li><a href="##">LECTURES BY PRASHANT KIRAD</a>
-            </li></li>
+            <li><a href="##" class="box-link">N.C.E.R.T Book Ch. PDF</a></li>
+            <li><a href="##" class="box-link">N.C.E.R.T Exemplar PDF</a></li>
+            <li><a href="##" class="box-link">LECTURES BY PHYSICS WALLAH</a></li>
+            <li><a href="##" class="box-link">LECTURES BY PRASHANT KIRAD</a></li>
         </ul>
-        <a href="science.html">Go Back</a>
-             </div>
-             <footer>
-                <p>&copy; 2024 Study Planet - Pranav Kr. Sharma. All rights Reserved <a href="E:\Study Planet -- Privacy Policy.pdf">  Privacy Policy</a></p>
-            </footer></body>
+        <p><a href="science.html" class="box-link">Go Back</a></p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Study Planet - Pranav Kr. Sharma. All rights Reserved <a href="privacypolicy-studyplanet.html">  Privacy Policy</a></p>
+    </footer>
+</body>
 </html>
